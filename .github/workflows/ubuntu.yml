@@ -74,8 +74,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-#        gcc: [9, 10, 11, 12]
-        gcc: [9, 12]
+        gcc: [9, 10, 11, 12]
         standard: [98, 11, 14, 17, 20]
 
     env:
@@ -125,8 +124,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-#        clang: ['6.0', 7, 8]
-        clang: ['6.0']
+        clang: ['6.0', 7, 8]
         standard: [98, 11, 14, 17]
 
     env:
@@ -155,8 +153,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-#        clang: [9, 10]
-        clang: [9]
+        clang: [9, 10]
         standard: [98, 11, 14, 17]
 
     env:
@@ -185,8 +182,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-#        clang: [11, 12, 13, 14]
-        clang: [11, 14]
+        clang: [11, 12, 13, 14]
         standard: [98, 11, 14, 17]
 
     env:
