@@ -1,3 +1,5 @@
+#include <iostream>
+
 #undef _STANDARD_DETERMINED
 
 #ifdef _MSVC_LANG
@@ -28,6 +30,11 @@
 
 int main()
 {
+#ifdef _MSVC_LANG
+    std::cout << "msvc macro = " << _MSVC_LANG << std::endl;
+#else
+    std::cout << "cxx macro = " << __cplusplus << std::endl;
+#endif  // _MSVC_LANG
     if (_STANDARD_DETERMINED == CXX_STANDARD) {
         return 0;
     } else {
