@@ -45,7 +45,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        gcc: [8]
+        gcc: [8, 9, 10]
         standard: [98, 11, 14, 17]
 
     env:
@@ -74,7 +74,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        gcc: [9, 10, 11, 12]
+        gcc: [11, 12]
         standard: [98, 11, 14, 17, 20]
 
     env:
