@@ -29,7 +29,7 @@ jobs:
 
     - name: Test
       working-directory: ${{github.workspace}}/build
-      run: ctest -C ${{env.BUILD_TYPE}}
+      run: ctest -C ${{env.BUILD_TYPE}} --output-on-failure
 
   msvc-2022:
     runs-on: windows-2022
@@ -51,7 +51,7 @@ jobs:
 
     - name: Test
       working-directory: ${{github.workspace}}/build
-      run: ctest -C ${{env.BUILD_TYPE}}
+      run: ctest -C ${{env.BUILD_TYPE}} --output-on-failure
 
   msys2-latest:
     runs-on: windows-latest
@@ -86,7 +86,7 @@ jobs:
 
     - name: Test
       working-directory: '${{github.workspace}}/build'
-      run: ctest -C ${{env.BUILD_TYPE}}
+      run: ctest -C ${{env.BUILD_TYPE}} --output-on-failure
 
   clang-2019:
     runs-on: windows-2019
@@ -94,8 +94,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-#        version: [11, 12, 13, 14, 16]
-        version: [11, 16]
+        version: [11, 12, 13, 14, 16]
         standard: [98, 11, 14, 17, 20]
 
     steps:
@@ -112,7 +111,7 @@ jobs:
 
     - name: Test
       working-directory: ${{github.workspace}}/build
-      run: ctest -C ${{env.BUILD_TYPE}}
+      run: ctest -C ${{env.BUILD_TYPE}} --output-on-failure
 
   clang-2022:
     runs-on: windows-2022
@@ -137,4 +136,4 @@ jobs:
 
     - name: Test
       working-directory: ${{github.workspace}}/build
-      run: ctest -C ${{env.BUILD_TYPE}}
+      run: ctest -C ${{env.BUILD_TYPE}} --output-on-failure
